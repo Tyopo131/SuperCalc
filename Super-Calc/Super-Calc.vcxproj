@@ -130,6 +130,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="mathtree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\translations.hpp" />

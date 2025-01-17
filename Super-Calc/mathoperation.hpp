@@ -1,7 +1,7 @@
 #pragma once
 #include <concepts>
 
-namespace MathOperations {
+namespace mathOperations {
 	template <typename T>
 	concept Numeric = std::integral<T> || std::floating_point<T>;
 	enum class Operation {
