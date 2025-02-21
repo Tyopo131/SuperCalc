@@ -364,3 +364,11 @@ FodyWeavers.xsd
 
 /include/nlohmann/json/json.hpp
 /include/nlohmann/json.hpp
+/CMakeFiles
+/.ninja_deps
+/.ninja_log
+/build.ninja
+/CMakeCache.txt
+/CmakeLists.txt
+/SuperCalc.exe
+/__cmake_cxx23.lib
