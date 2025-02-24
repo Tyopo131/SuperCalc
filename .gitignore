@@ -369,6 +369,5 @@ FodyWeavers.xsd
 /.ninja_log
 /build.ninja
 /CMakeCache.txt
-/CmakeLists.txt
 /SuperCalc.exe
 /__cmake_cxx23.lib
