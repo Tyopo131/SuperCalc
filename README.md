@@ -4,6 +4,7 @@ You won't see some boring GUI window with a on-screen keyboard, you're on a comp
 This calculator will open a **text editor** to edit a temporary file. Once the editor/tab is closed, C++ will blazingly fast parse your calculation and spit out a result in another file!
 ## Contributing
 ### [Cmake](https://www.cmake.org) by KitWare
+The minimum required version of **CMake** for this project is **3.31.5**.
 #### Why Cmake?
 Cmake lets this project stay cross-platform and cross-IDE. Contributors all use a different IDE.
 
