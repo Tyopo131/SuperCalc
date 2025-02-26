@@ -4,13 +4,30 @@ on:
     pull_request:
 
 jobs:
-    build:
+    Build-on-Linux:
         runs-on: ubuntu-latest
         steps:
             - name: Install Dependencies
               run: |
+                echo "deb [trusted=yes] https://apt.kitware.com/ubuntu/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/kitware.list
+                sudo apt-get update
                 sudo apt update
                 sudo apt install -y cmake ninja-build g++
+                sudo apt upgrade -y
+            - name: Clone repository
+              uses: actions/checkout@v4
+            - name: Generate build files with CMake
+              run: |
+                cmake -S . -B out -G Ninja -DCMAKE_BUILD_TYPE=Release
+            - name: Build Project
+              run: |
+                cmake --build out
+    Build-on-Windows:
+        runs-on: windows-latest
+        steps:
+            - name: Install Dependencies
+              run: |
+                choco install -y cmake ninja
             - name: Clone repository
               uses: actions/checkout@v4
             - name: Generate build files with CMake
