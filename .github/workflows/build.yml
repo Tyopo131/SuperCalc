@@ -4,7 +4,7 @@ on:
     pull_request:
 
 jobs:
-    build:
+    build-on-linux:
         runs-on: ubuntu-latest
         steps:
             - name: Install Dependencies
@@ -17,5 +17,19 @@ jobs:
               run: |
                 cmake -S . -B out -G Ninja -DCMAKE_BUILD_TYPE=Release
             - name: Build Project
+              run: |
+                cmake --build out
+    build-on-windows:
+        runs-on: windows-latest
+        steps:
+            - name: Install dependencies
+              run: |
+                choco install cmake ninja
+            - name: Clone repository
+              uses: actions/checkout@v4
+            - name: Generate build files with CMake
+              run: |
+                cmake -S . -B out -G Ninja -DCMAKE_BUILD_TYPE=Release
+            - name: Build project
               run: |
                 cmake --build out
