@@ -10,7 +10,7 @@ jobs:
             - name: Install Dependencies
               run: |
                 sudo apt-get update
-                sudo apt-get install -y cmake ninja-build g++
+                sudo apt-get install -y cmake build-essential ninja-build g++
             - name: Clone repository
               uses: actions/checkout@v4
             - name: Generate build files with CMake
